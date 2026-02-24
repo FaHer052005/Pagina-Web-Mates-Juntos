@@ -1,0 +1,154 @@
+// Carrito de compras
+let carrito = [];
+
+// Agregar producto al carrito
+function agregarCarrito(nombre, precio) {
+    const producto = {
+        nombre: nombre,
+        precio: precio,
+        id: Date.now()
+    };
+    
+    carrito.push(producto);
+    actualizarCarrito();
+    mostrarNotificacion(`${nombre} agregado al carrito`);
+}
+
+// Actualizar carrito en la UI
+function actualizarCarrito() {
+    const carritoItems = document.getElementById('carrito-items');
+    const carritoCount = document.querySelector('.carrito-count');
+    const total = document.getElementById('total');
+    
+    carritoCount.textContent = `(${carrito.length})`;
+    
+    if (carrito.length === 0) {
+        carritoItems.innerHTML = '<p style="text-align: center; color: #999;">Tu carrito está vacío</p>';
+        total.textContent = '0';
+        return;
+    }
+    
+    carritoItems.innerHTML = carrito.map(item => `
+        <div class="carrito-item">
+            <span class="carrito-item-nombre">${item.nombre}</span>
+            <span class="carrito-item-precio">$${item.precio}</span>
+            <button class="carrito-item-eliminar" onclick="eliminarDelCarrito(${item.id})">Eliminar</button>
+        </div>
+    `).join('');
+    
+    const totalPrice = carrito.reduce((sum, item) => sum + item.precio, 0);
+    total.textContent = totalPrice;
+}
+
+// Eliminar producto del carrito
+function eliminarDelCarrito(id) {
+    carrito = carrito.filter(item => item.id !== id);
+    actualizarCarrito();
+    mostrarNotificacion('Producto eliminado del carrito');
+}
+
+// Finalizar compra
+function finalizarCompra() {
+    if (carrito.length === 0) {
+        alert('Tu carrito está vacío');
+        return;
+    }
+    
+    const total = carrito.reduce((sum, item) => sum + item.precio, 0);
+    const mensaje = `Deseas finalizar la compra por $${total}? Total de ${carrito.length} producto(s).`;
+    
+    if (confirm(mensaje)) {
+        const listaProductos = carrito.map(item => `${item.nombre} - $${item.precio}`).join('\n');
+        alert(`¡Gracias por tu compra!\n\nProductos:\n${listaProductos}\n\nTotal: $${total}\n\nNos contactaremos pronto para confirmar tu pedido.`);
+        carrito = [];
+        actualizarCarrito();
+    }
+}
+
+// Enviar formulario
+function enviarFormulario(event) {
+    event.preventDefault();
+    
+    const nombre = event.target.elements[0].value;
+    const email = event.target.elements[1].value;
+    const mensaje = event.target.elements[2].value;
+    
+    // Aquí puedes agregar la lógica para enviar el formulario
+    // Por ejemplo, con fetch a un servidor
+    
+    console.log('Formulario enviado:', { nombre, email, mensaje });
+    alert(`¡Gracias ${nombre}! Hemos recibido tu mensaje. Nos contactaremos pronto.`);
+    
+    event.target.reset();
+}
+
+// Toggle menú hamburguesa
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+
+// Cerrar menú cuando se hace click en un link
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.remove('active');
+        });
+    });
+    
+    // Inicializar carrito
+    actualizarCarrito();
+});
+
+// Notificación temporal
+function mostrarNotificacion(mensaje) {
+    const notificacion = document.createElement('div');
+    notificacion.textContent = mensaje;
+    notificacion.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 25px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        animation: slideIn 0.3s ease;
+    `;
+    
+    document.body.appendChild(notificacion);
+    
+    setTimeout(() => {
+        notificacion.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => notificacion.remove(), 300);
+    }, 3000);
+}
+
+// Agregar estilos de animación para notificaciones
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideIn {
+        from {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slideOut {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);

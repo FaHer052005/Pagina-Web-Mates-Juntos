@@ -1,0 +1,89 @@
+<!-- Archivo de configuración opcional para mejorar la página -->
+
+<!-- MEJORAS QUE PUEDES AGREGAR A index.html -->
+
+<!-- 1. Meta tags adicionales para SEO (agregar en <head>) -->
+<meta name="description" content="Mates Juntos - Venta de mates artesanales premium. Encuentra los mejores mates de calabaza, cerámica, madera y más.">
+<meta name="keywords" content="mates artesanales, venta de mates, mates premium, bombillas de plata, termos">
+<meta name="author" content="Mates Juntos">
+<meta name="theme-color" content="#8B6F47">
+<meta property="og:title" content="Mates Juntos - Venta de Mates Premium">
+<meta property="og:description" content="Los mejores mates artesanales para compartir momentos">
+<meta property="og:type" content="website">
+
+<!-- 2. Favicon (agregar en <head>) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%238B6F47'>☕</text></svg>">
+
+<!-- TIPS DE OPTIMIZACIÓN -->
+
+/**
+ * TIPS PARA MEJORAR TU PÁGINA WEB:
+ * 
+ * 1. DOMINIO Y HOSTING
+ *    - Compra un dominio .com.ar o .com
+ *    - Elige un hosting confiable (Netlify, Vercel, etc. son gratis)
+ * 
+ * 2. AGREGAR IMÁGENES
+ *    - Crea una carpeta "assets/images" y agrega fotos de los mates
+ *    - Cambiar los <i class="fas fa-bottle-water"></i> por <img src="...">
+ *    - Optimiza las imágenes (comprímelas para que carguen rápido)
+ * 
+ * 3. BACKEND PARA FORMULARIOS
+ *    - Usa Firebase, Formspree, o EmailJS para enviar formularios por email
+ *    - Ejemplo con Formspree: https://formspree.io/
+ * 
+ * 4. INTEGRACIÓN DE PAGOS
+ *    - MercadoPago (muy usado en Argentina)
+ *    - PayPal
+ *    - Tarjeta de crédito
+ * 
+ * 5. ANALYTICS
+ *    - Agrega Google Analytics para ver estadísticas de visitas
+ *    - Rastrear qué productos son más populares
+ * 
+ * 6. REDES SOCIALES
+ *    - Agrega enlaces funcionales a Instagram, Facebook, WhatsApp
+ *    - Integra botón de WhatsApp para consultas directas
+ * 
+ * 7. CERTIFICADO SSL
+ *    - Asegúrate de tener HTTPS (llave en la URL)
+ *    - Necesario para pagos seguros
+ * 
+ * 8. MOBILE FIRST
+ *    - Prueba en distintos dispositivos
+ *    - Asegúrate que el carrito sea fácil de usar en móvil
+ * 
+ * 9. VELOCIDAD
+ *    - Optimiza imágenes
+ *    - Minifica CSS y JavaScript
+ *    - Usa CDN para recursos
+ * 
+ * 10. SEO
+ *     - Usa palabras clave relacionadas con mates
+ *     - Crea blogs sobre la cultura del mate
+ *     - Genera backlinks desde otros sitios
+ */
+
+// EJEMPLO: Integración con WhatsApp
+function enviarPorWhatsApp() {
+    const total = carrito.reduce((sum, item) => sum + item.precio, 0);
+    const listaProductos = carrito.map(item => `${item.nombre} - $${item.precio}`).join('%0A');
+    const mensaje = `Hola! Quisiera comprar los siguientes productos:%0A${listaProductos}%0ATotal: $${total}%0A%0AMe gustaría confirmar mi compra.`;
+    const numeroWhatsApp = '5491112345678'; // Cambiar por el número real
+    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
+    window.open(urlWhatsApp, '_blank');
+}
+
+// EJEMPLO: Integración con FormSpree (para formularios)
+// Cambiar la acción del formulario a:
+// <form action="https://formspree.io/f/TU_ID_AQUI" method="POST">
+
+// EJEMPLO: Google Analytics
+// Agregar antes de cerrar </body>:
+// <script async src="https://www.googletagmanager.com/gtag/js?id=G-TU_ID_AQUI"></script>
+// <script>
+//   window.dataLayer = window.dataLayer || [];
+//   function gtag(){dataLayer.push(arguments);}
+//   gtag('js', new Date());
+//   gtag('config', 'G-TU_ID_AQUI');
+// </script>

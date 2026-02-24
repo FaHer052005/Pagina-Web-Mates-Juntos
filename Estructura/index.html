@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mates Juntos - Venta de Mates Premium</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-leaf"></i> Mates Juntos
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Mates Juntos</h1>
+            <p>Los mejores mates artesanales para compartir momentos</p>
+            <button class="btn btn-primary" onclick="document.getElementById('productos').scrollIntoView({behavior: 'smooth'})">
+                Ver Catálogo
+            </button>
+        </div>
+    </section>
+
+    <!-- Productos -->
+    <section id="productos" class="productos">
+        <div class="container">
+            <h2>Nuestros Productos</h2>
+            <div class="productos-grid">
+                <!-- Producto 1 -->
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <i class="fas fa-bottle-water"></i>
+                    </div>
+                    <h3>Mate Tradicional Calabaza</h3>
+                    <p class="descripcion">Mate artesanal hecho con calabaza natural</p>
+                    <div class="precio">$450</div>
+                    <button class="btn btn-secondary" onclick="agregarCarrito('Mate Calabaza', 450)">
+                        Agregar al Carrito
+                    </button>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <i class="fas fa-bottle-water"></i>
+                    </div>
+                    <h3>Mate de Cerámica</h3>
+                    <p class="descripcion">Elegante mate de cerámica esmaltada</p>
+                    <div class="precio">$650</div>
+                    <button class="btn btn-secondary" onclick="agregarCarrito('Mate Cerámica', 650)">
+                        Agregar al Carrito
+                    </button>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <i class="fas fa-bottle-water"></i>
+                    </div>
+                    <h3>Mate de Madera Ébano</h3>
+                    <p class="descripcion">Mate premium con acabado en madera ébano</p>
+                    <div class="precio">$850</div>
+                    <button class="btn btn-secondary" onclick="agregarCarrito('Mate Ébano', 850)">
+                        Agregar al Carrito
+                    </button>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <i class="fas fa-bottle-water"></i>
+                    </div>
+                    <h3>Set Mate Completo</h3>
+                    <p class="descripcion">Incluye mate, bombilla y termo</p>
+                    <div class="precio">$1200</div>
+                    <button class="btn btn-secondary" onclick="agregarCarrito('Set Completo', 1200)">
+                        Agregar al Carrito
+                    </button>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <i class="fas fa-bottle-water"></i>
+                    </div>
+                    <h3>Bombilla de Plata</h3>
+                    <p class="descripcion">Bombilla artesanal de plata .925</p>
+                    <div class="precio">$380</div>
+                    <button class="btn btn-secondary" onclick="agregarCarrito('Bombilla Plata', 380)">
+                        Agregar al Carrito
+                    </button>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <i class="fas fa-bottle-water"></i>
+                    </div>
+                    <h3>Termo Premium</h3>
+                    <p class="descripcion">Termo térmico de 1 litro</p>
+                    <div class="precio">$520</div>
+                    <button class="btn btn-secondary" onclick="agregarCarrito('Termo Premium', 520)">
+                        Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Características -->
+    <section class="caracteristicas">
+        <div class="container">
+            <div class="caracteristicas-grid">
+                <div class="caracteristica">
+                    <i class="fas fa-leaf"></i>
+                    <h3>100% Artesanal</h3>
+                    <p>Elaborados a mano con técnicas tradicionales</p>
+                </div>
+                <div class="caracteristica">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Envío Rápido</h3>
+                    <p>Envíos a toda Argentina en 24-48 horas</p>
+                </div>
+                <div class="caracteristica">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Garantía</h3>
+                    <p>Garantía de calidad en todos nuestros productos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrito -->
+    <section class="carrito-section">
+        <div class="container">
+            <h2>Tu Carrito <span class="carrito-count">(0)</span></h2>
+            <div id="carrito-items" class="carrito-items"></div>
+            <div class="carrito-total">
+                <strong>Total: $<span id="total">0</span></strong>
+            </div>
+            <button class="btn btn-primary" onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contacto-content">
+                <form class="formulario" onsubmit="enviarFormulario(event)">
+                    <input type="text" placeholder="Tu Nombre" required>
+                    <input type="email" placeholder="Tu Email" required>
+                    <textarea placeholder="Tu Mensaje" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+                <div class="contacto-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+54 9 11 1234-5678</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@matesjuntos.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Buenos Aires, Argentina</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Mates Juntos. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/matesjuntos.ok/"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
