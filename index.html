@@ -27,7 +27,6 @@
         </div>
     </nav>
 
-    <!-- En esta sección se muestra el Inicio (parte de arriba ) -->
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="hero-content">
@@ -44,87 +43,89 @@
         <div class="container">
             <h2>Nuestros Productos</h2>
             <div class="productos-grid">
+
                 <!-- Producto 1 -->
-                <div class="producto-card">
+                <div class="producto-card" onclick="window.location='producto.html?id=1'" style="cursor:pointer">
                     <div class="producto-imagen">
-                        <img src="fotos/MateImperial.png" alt="Mate Tradicional Calabaza">
+                        <img src="/fotos/FotoImperial.jpeg" alt="Mate Imperial con Virola">
                     </div>
-                    <h3>Mate Tradicional Calabaza</h3>
-                    <p class="descripcion">Mate artesanal hecho con calabaza natural</p>
+                    <h3>Mate Imperial Virola Acero</h3>
+                    <p class="descripcion">Mate artesanal con virola de acero</p>
                     <div class="precio">$13050</div>
-                    <button class="btn btn-secondary" onclick="agregarCarrito('Mate Calabaza', 13050)">
+                    <button class="btn btn-secondary" onclick="event.stopPropagation(); agregarCarrito('Mate Imperial', 13050)">
                         Agregar al Carrito
                     </button>
                 </div>
 
                 <!-- Producto 2 -->
-                <div class="producto-card">
+                <div class="producto-card" onclick="window.location='producto.html?id=2'" style="cursor:pointer">
                     <div class="producto-imagen">
-                        <img src="fotos/MateCeramica.png" alt="Mate de Cerámica">
+                        <img src="/fotos/FotoImperial4.jpeg" alt="Mate Ace Imperial">
                     </div>
-                    <h3>Mate de Cerámica</h3>
-                    <p class="descripcion">Elegante mate de cerámica esmaltada</p>
+                    <h3>Mate Imperial Virola con Alpaca</h3>
+                    <p class="descripcion">Exclusivo mate con virola Cincelada de alpaca de gran tamaño</p>
                     <div class="precio">$16050</div>
-                    <button class="btn btn-secondary" onclick="agregarCarrito('Mate Cerámica', 16050)">
+                    <button class="btn btn-secondary" onclick="event.stopPropagation(); agregarCarrito('Mate Ace Imperial', 16050)">
                         Agregar al Carrito
                     </button>
                 </div>
 
                 <!-- Producto 3 -->
-                <div class="producto-card">
+                <div class="producto-card" onclick="window.location='producto.html?id=3'" style="cursor:pointer">
                     <div class="producto-imagen">
-                        <img src="fotos/MateMadera.png" alt="Mate de Madera Ébano">
+                        <img src="/fotos/FotoCam2.jpeg" alt="Mate Camionero Algarrobo">
                     </div>
-                    <h3>Mate de Madera Ébano</h3>
-                    <p class="descripcion">Mate premium con acabado en madera ébano</p>
+                    <h3>Mate Camionero Algarrobo</h3>
+                    <p class="descripcion">Mate premium con acabado de Madera con Virola de Acero</p>
                     <div class="precio">$850</div>
-                    <button class="btn btn-secondary" onclick="agregarCarrito('Mate Ébano', 850)">
+                    <button class="btn btn-secondary" onclick="event.stopPropagation(); agregarCarrito('Mate Ébano', 850)">
                         Agregar al Carrito
                     </button>
                 </div>
 
                 <!-- Producto 4 -->
-                <div class="producto-card">
-                    <div class="producto-imagen">
-                        <img src="fotos/SetMateCompleto.png" alt="Set Mate Completo">
+                <div class="producto-card" onclick="window.location='producto.html?id=4'" style="cursor:pointer">
+                    <div class="producto-imagen"> 
+                        <img src="/fotos/FotoCamionero.jpeg" alt="Mate Camionero Calabaza">
                     </div>
-                    <h3>Set Mate Completo</h3>
-                    <p class="descripcion">Incluye mate, bombilla y termo</p>
+                    <h3>Mate Camionero Calabaza</h3>
+                    <p class="descripcion">Mate Camionero de calabaza, Virola Cincelada con alpaca</p>
                     <div class="precio">$1200</div>
-                    <button class="btn btn-secondary" onclick="agregarCarrito('Set Completo', 1200)">
+                    <button class="btn btn-secondary" onclick="event.stopPropagation(); agregarCarrito('Mate Camionero', 1200)">
                         Agregar al Carrito
                     </button>
                 </div>
 
                 <!-- Producto 5 -->
-                <div class="producto-card">
+                <div class="producto-card" onclick="window.location='producto.html?id=5'" style="cursor:pointer">
                     <div class="producto-imagen">
-                        <img src="fotos/BombillaPlata.png" alt="Bombilla de Plata">
+                        <img src="FotoBombilla.jpeg" alt="Bombilla Artesanal de Acero">
                     </div>
-                    <h3>Bombilla de Plata</h3>
-                    <p class="descripcion">Bombilla artesanal de plata .925</p>
+                    <h3>Bombilla de Acero</h3>
+                    <p class="descripcion">Bombilla de acero inoxidable espejado</p>
                     <div class="precio">$380</div>
-                    <button class="btn btn-secondary" onclick="agregarCarrito('Bombilla Plata', 380)">
+                    <button class="btn btn-secondary" onclick="event.stopPropagation(); agregarCarrito('Bombilla Acero', 380)">
                         Agregar al Carrito
                     </button>
                 </div>
 
                 <!-- Producto 6 -->
-                <div class="producto-card">
+                <div class="producto-card" onclick="window.location='producto.html?id=6'" style="cursor:pointer">
                     <div class="producto-imagen">
-                        <img src="fotos/TermoPremium.png" alt="Termo Premium">
+                        <img src="FotoImperial5.jpeg" alt="Mate Madera con Virola Grabada">
                     </div>
-                    <h3>Termo Premium</h3>
-                    <p class="descripcion">Termo térmico de 1 litro</p>
+                    <h3>Mate Madera con Virola Grabada</h3>
+                    <p class="descripcion">Madera miel con virola de motivos florales</p>
                     <div class="precio">$520</div>
-                    <button class="btn btn-secondary" onclick="agregarCarrito('Termo Premium', 520)">
+                    <button class="btn btn-secondary" onclick="event.stopPropagation(); agregarCarrito('Mate Virola Grabada', 520)">
                         Agregar al Carrito
                     </button>
                 </div>
+
             </div>
         </div>
     </section>
- 
+
     <!-- Características -->
     <section class="caracteristicas">
         <div class="container">
@@ -174,11 +175,11 @@
                 <div class="contacto-info">
                     <div class="info-item">
                         <i class="fas fa-phone"></i>
-                        <p>+54 9 3544 576440</p>
+                        <p>+54 9 3544-321486</p>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
-                        <p>info@matesjuntos.com</p>
+                        <p>matesjuntos01@gmail.com</p>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
@@ -196,7 +197,7 @@
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="https://www.instagram.com/matesjuntos.ok/"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://wa.me/5493544321486"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </footer>
