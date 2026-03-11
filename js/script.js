@@ -53,16 +53,26 @@ function finalizarCompra() {
         alert('Tu carrito está vacío');
         return;
     }
-    
+
     const total = carrito.reduce((sum, item) => sum + item.precio, 0);
-    const mensaje = `Deseas finalizar la compra por $${total}? Total de ${carrito.length} producto(s).`;
     
-    if (confirm(mensaje)) {
-        const listaProductos = carrito.map(item => `${item.nombre} - $${item.precio}`).join('\n');
-        alert(`¡Gracias por tu compra!\n\nProductos:\n${listaProductos}\n\nTotal: $${total}\n\nNos contactaremos pronto para confirmar tu pedido.`);
-        carrito = [];
-        actualizarCarrito();
-    }
+    // Armamos la lista de productos
+    const listaProductos = carrito
+        .map(item => `- ${item.nombre} - $${item.precio.toLocaleString('es-AR')}`)
+        .join('%0A');
+    
+    // Armamos el mensaje completo
+    const mensaje = 
+        `Hola! Quiero hacer un pedido 🧉%0A%0A` +
+        `${listaProductos}%0A%0A` +
+        `*Total: $${total.toLocaleString('es-AR')}*%0A%0A` +
+        `¿Cómo puedo pagar?`;
+    
+    // Tu número de WhatsApp (con código de país, sin espacios ni guiones)
+    const numero = '5493544321486';
+    
+    // Abrimos WhatsApp
+    window.open(`https://wa.me/${numero}?text=${mensaje}`, '_blank');
 }
 
 // Enviar formulario
