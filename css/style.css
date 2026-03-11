@@ -225,6 +225,19 @@ body {
     margin: 0 20px 20px 20px;
 }
 
+.precio-antes {
+    display: block;
+    font-size: 16px;
+    color: #999;
+    text-decoration: line-through;
+    font-weight: normal;
+}
+.precio-actual {
+    display: block;
+    font-size: 26x;
+    font-weight: bold;
+    color: var(--primary-color);
+}
 /* Características */
 .caracteristicas {
     padding: 80px 20px;

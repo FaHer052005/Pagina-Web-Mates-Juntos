@@ -439,6 +439,21 @@ body {
     color: var(--secondary);
 }
 
+.precio-antes {
+    display: block;
+    font-size: 16px;
+    color: #999;
+    text-decoration: line-through;
+    font-weight: normal;
+}
+
+.precio-oferta {
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
 /* FOOTER */
 footer {
     background: var(--primary);

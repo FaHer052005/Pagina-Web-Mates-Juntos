@@ -8,7 +8,7 @@ const products = [
         id: 1,
         name: "Mate Imperial con Virola",
         category: "Mates Premium",
-        price: 13050,
+        price: 20500,
         description: "Mate artesanal con virola de plata grabada con motivos florales. Una pieza de colección que combina la calidez de la madera con el brillo de la plata. Cada virola está cincelada a mano, haciendo de cada mate una obra única.",
         images: ["FotoImperial.jpeg", "FotoImperial3.jpeg", "FotoImperial4.jpeg", "FotoImperial5.jpeg"],
         features: ["Virola de plata .925 grabada", "Madera natural seleccionada", "Elaborado 100% a mano", "Curado y listo para usar", "Capacidad: ~180ml"]
@@ -76,7 +76,12 @@ function loadProduct(id) {
     document.getElementById('breadcrumb-name').textContent = product.name;
     document.getElementById('product-category').textContent = product.category;
     document.getElementById('product-name').textContent = product.name;
-    document.getElementById('product-price').textContent = product.price.toLocaleString('es-AR');
+    const precioTachado = Math.ceil((product.price * 1.09) / 500) * 500;
+
+document.getElementById('product-price').innerHTML = `
+    <span class="precio-antes">$${precioTachado.toLocaleString('es-AR')}</span>
+    <span class="precio-oferta">$${product.price.toLocaleString('es-AR')}</span>
+`;
     document.getElementById('product-description').textContent = product.description;
 
     // Features
