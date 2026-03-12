@@ -6,57 +6,66 @@
 const products = [
     {
         id: 1,
-        name: "Mate Imperial con Virola",
-        category: "Mates Premium",
+        name: "Mate Imperial Virola Acero",
+        category: "Mates de Madera",
         price: 20500,
-        description: "Mate artesanal con virola de plata grabada con motivos florales. Una pieza de colección que combina la calidez de la madera con el brillo de la plata. Cada virola está cincelada a mano, haciendo de cada mate una obra única.",
-        images: ["FotoImperial.jpeg", "FotoImperial3.jpeg", "FotoImperial4.jpeg", "FotoImperial5.jpeg"],
-        features: ["Virola de plata .925 grabada", "Madera natural seleccionada", "Elaborado 100% a mano", "Curado y listo para usar", "Capacidad: ~180ml"]
+        description: "Mate artesanal con virola de acero grabada con motivos florales. Una pieza de colección que combina la calidez de la madera con el brillo de acero. Cada virola está cincelada a mano, haciendo de cada mate una obra única.",
+        images: ["/fotos/FotoImpAce.jpeg", "/fotos/FotoImpAce2.jpeg"],
+        features: ["Virola de acero grabada", "Madera natural seleccionada", "Elaborado 100% a mano", "Contactar si quiere curado y listo para usar.", "Capacidad: ~180ml"]
     },
     {
         id: 2,
-        name: "Mate Ace Imperial",
+        name: "Mate Imperial Virola con Alpaca",
         category: "Mates de Madera",
-        price: 16050,
-        description: "Exclusivo mate con diseño 'ace' de virola plateada de gran tamaño. Cuerpo de madera torneado en forma redondeada, ideal para quienes prefieren una panza amplia. La virola presenta un grabado de motivos florales y geométricos de alta complejidad.",
-        images: ["FotoImpAce.jpeg", "FotoImperial.jpeg"],
+        price: 22000,
+        description: "Exclusivo mate con diseño 'Floral' de virola plateada de gran tamaño. Cuerpo de madera torneado en forma redondeada, ideal para quienes prefieren una panza amplia. La virola presenta un grabado de motivos florales y geométricos de alta complejidad.",
+        images: ["/fotos/FotoImpAlpaca.jpeg","/fotos/FotoImpAlpaca2.jpeg", "/fotos/FotoImpAlpaca3.jpeg", "/fotos/FotoImpAlpaca4.jpeg"],
         features: ["Virola plateada de gran tamaño", "Madera torneada artesanal", "Diseño redondeado ergonómico", "Grabado floral y geométrico", "Capacidad: ~200ml"]
     },
     {
         id: 3,
-        name: "Mate de Madera Ébano",
+        name: "Mate Camionero Algarrobo",
         category: "Mates de Madera",
-        price: 850,
+        price: 16000,
         description: "Mate artesanal tallado a mano en madera oscura tipo ébano, con virola de acero inoxidable. Elegante y sobrio, perfecto para el uso diario. Su forma cónica clásica lo hace cómodo para sostener.",
-        images: ["FotoCam2.jpeg", "FotoCam3.jpeg"],
-        features: ["Madera oscura tipo ébano", "Virola de acero inoxidable", "Forma cónica ergonómica", "Elaborado a mano", "Capacidad: ~150ml"]
+        images: ["/fotos/FotoCam2.jpeg", "/fotos/FotoCam3.jpeg"],
+        features: ["Madera oscura tipo Algarrobo", "Virola de acero inoxidable", "Forma cónica ergonómica", "Elaborado a mano", "Capacidad: ~150ml"]
     },
     {
         id: 4,
-        name: "Mate Camionero Negro",
+        name: "Mate Imperial Calabaza",
         category: "Mates Calabaza",
-        price: 1200,
-        description: "Clásico mate camionero en calabaza lacada color negro con virola de acero inoxidable y diseño de rombos. Robusto, de boca ancha y gran capacidad. Ideal para los que toman mate largo.",
-        images: ["FotoCamionero.jpeg", "FotoImp.jpeg"],
+        price: 26500,
+        description: "Clásico mate Imperial en calabaza lacada color negro con virola de acero inoxidable y diseño de rombos. Robusto, de boca ancha y gran capacidad. Ideal para los que toman mate largo.",
+        images: ["/fotos/FotoImpCalabaza.jpeg", "/fotos/FotoImpCalabaza2.jpeg"],
         features: ["Calabaza lacada color negro", "Virola con diseño de rombos", "Boca ancha estilo camionero", "Gran capacidad: ~250ml", "Muy resistente al uso diario"]
     },
     {
         id: 5,
-        name: "Bombilla Artesanal de Acero",
-        category: "Bombillas",
-        price: 380,
-        description: "Bombilla artesanal de acero inoxidable con terminación espejada y diseño ondulado en el mango. Filtro tipo cuchara perforado que garantiza una yerba siempre limpia. Compatible con todo tipo de mates.",
-        images: ["FotoBombilla.jpeg"],
-        features: ["Acero inoxidable 304", "Terminación espejada", "Filtro tipo cuchara", "Diseño ondulado en el mango", "Universal para todo mate"]
+        name: "Mate Camionero Calabaza",
+        category: "Mates Calabaza",
+        price: 16000,
+        description: "Clásico mate camionero en calabaza lacada color negro con virola de acero inoxidable y diseño de rombos. Robusto, de boca ancha y gran capacidad. Ideal para los que toman mate largo.",
+        images: ["/fotos/FotoCamCalabaza.jpeg", "/fotos/FotoCamCalabaza2.jpeg","/fotos/FotoCamCalabaza3.jpeg"],
+        features: ["Calabaza cubierta con cuero Color bordo", "Virola con diseño liso Clasico", "Boca estilo Camionero", "Gran chica: ~140ml", "Muy resistente al uso diario"]
     },
     {
         id: 6,
-        name: "Mate Madera con Virola Grabada",
-        category: "Mates Premium",
-        price: 520,
-        description: "Mate de madera natural con virola de metal grabada con motivos florales. Cuerpo redondeado de madera miel, combinado con una virola que brilla y destaca. Una pieza que enamora desde el primer vistazo.",
-        images: ["FotoImperial5.jpeg", "FotoImperial4.jpeg"],
+        name: "Bombilla Cincelada de Acero Inoxidable",
+        category: "Accesorios",
+        price: 10000,
+        description: "Accesorio para mate, Bombilla de Acero Inoxidable, resistente.",
+        images: ["/fotos/BombillaCincelada.jpeg", "/fotos/BombillaCincelada2.jpeg"],
         features: ["Madera miel seleccionada", "Virola con motivos florales", "Forma redondeada", "Tratamiento anti-humedad", "Capacidad: ~160ml"]
+    },
+    {
+        id: 7,
+        name: "Bombilla Lisa Acero Inoxidable",
+        category: "Accesorios",
+        price: 8500,
+        description: "Bombilla de acero inoxidable con diseño clásico y funcional. Su forma recta y boca lisa facilitan la limpieza, mientras que su resistencia al calor garantiza una experiencia de mate sin preocupaciones.",
+        images: ["/fotos/BombillaLisa.jpeg", "/fotos/BombillaLisa2.jpeg", "/fotos/BombillaLisa3.jpeg"],
+        features: ["Acero inoxidable de alta calidad", "Diseño clásico recto", "Boca lisa para fácil limpieza", "Resistente al calor", "Longitud: 20cm"]
     }
 ];
 
@@ -154,6 +163,22 @@ function changeQty(delta) {
 function addToCart() {
     if (!currentProduct) return;
     const qty = parseInt(document.getElementById('qty').value);
+
+    // Leemos el carrito actual del navegador
+    const carritoGuardado = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    // Agregamos el producto tantas veces como la cantidad
+    for (let i = 0; i < qty; i++) {
+        carritoGuardado.push({
+            id: Date.now() + i,
+            nombre: currentProduct.name,
+            precio: currentProduct.price
+        });
+    }
+
+    // Guardamos el carrito actualizado
+    localStorage.setItem('carrito', JSON.stringify(carritoGuardado));
+
     showToast(`✓ ${qty}x ${currentProduct.name} agregado al carrito`);
 }
 

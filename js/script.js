@@ -1,5 +1,5 @@
 // Carrito de compras
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 // Agregar producto al carrito
 function agregarCarrito(nombre, precio) {
@@ -16,6 +16,8 @@ function agregarCarrito(nombre, precio) {
 
 // Actualizar carrito en la UI
 function actualizarCarrito() {
+    localStorage.setItem('carrito', JSON.stringify(carrito)); // ← agregá esta línea
+    
     const carritoItems = document.getElementById('carrito-items');
     const carritoCount = document.querySelector('.carrito-count');
     const total = document.getElementById('total');
