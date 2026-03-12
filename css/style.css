@@ -193,13 +193,14 @@ body {
     align-items: center;
     justify-content: center;
     color: var(--white);
+    padding: 10px;
 }
 
 .producto-imagen img {
-    max-width: 85%;
-    max-height: 170px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+    width: 50%;
+    height: 120%;
+    object-fit: cover;
+    object-position: center;
 }
 .producto-card h3 {
     font-size: 20px;
