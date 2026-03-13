@@ -80,17 +80,25 @@ function finalizarCompra() {
 // Enviar formulario
 function enviarFormulario(event) {
     event.preventDefault();
-    
+
     const nombre = event.target.elements[0].value;
     const email = event.target.elements[1].value;
     const mensaje = event.target.elements[2].value;
-    
-    // Aquí puedes agregar la lógica para enviar el formulario
-    // Por ejemplo, con fetch a un servidor
-    
-    console.log('Formulario enviado:', { nombre, email, mensaje });
-    alert(`¡Gracias ${nombre}! Hemos recibido tu mensaje. Nos contactaremos pronto.`);
-    
+
+    // Armamos el mensaje para WhatsApp
+    const texto = 
+        `Hola! Tengo una consulta 🧉%0A%0A` +
+        `*Nombre:* ${nombre}%0A` +
+        `*Email:* ${email}%0A%0A` +
+        `*Mensaje:*%0A${mensaje}`;
+
+    // Tu número de WhatsApp
+    const numero = '5493544321486';
+
+    // Abrimos WhatsApp con el mensaje
+    window.open(`https://wa.me/${numero}?text=${texto}`, '_blank');
+
+    // Limpiamos el formulario
     event.target.reset();
 }
 
