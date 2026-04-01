@@ -4,10 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mates Juntos - Venta de Mates Premium</title>
+
+    <!-- ✅ FIX 5: Meta tags SEO y Open Graph -->
+    <meta name="description" content="Mates Juntos - Venta de mates artesanales premium. Encontrá los mejores mates de calabaza, madera y alpaca con envío a todo el país.">
+    <meta name="keywords" content="mates artesanales, venta de mates, mates premium, bombillas, mates Buenos Aires">
+    <meta name="author" content="Mates Juntos">
+    <meta name="theme-color" content="#8B6F47">
+    <meta property="og:title" content="Mates Juntos - Venta de Mates Premium">
+    <meta property="og:description" content="Los mejores mates artesanales para compartir momentos juntos. Envíos a toda Argentina.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="fotos/LogoMatesJuntos.jpeg">
+
     <link rel="stylesheet" href="css/style.css">
+    <!-- ✅ FIX 2: Font Awesome agregado -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="fotos/LogoMatesJuntos.jpeg" type="image/jpeg">
 </head>
 <body>
+
     <!-- Navegación -->
     <nav class="navbar">
         <div class="container">
@@ -47,10 +61,11 @@
                 <!-- Producto 1 -->
                 <div class="producto-card" onclick="window.location='producto.html?id=1'" style="cursor:pointer">
                     <div class="producto-imagen">
-                        <img src="/fotos/FotoImpAce.jpeg" alt="Mate Imperial con Virola">
+                        <!-- ✅ FIX 1: Rutas relativas (sin / al inicio) -->
+                        <img src="fotos/FotoImpAce.jpeg" alt="Mate Imperial con Virola">
                     </div>
                     <h3>Mate Imperial Virola Acero</h3>
-                    <p class="descripcion">Mate artesanal con virola de acero</p>
+                    <p class="descripcion">Mate artesanal con virola de acero inoxidable, ideal para uso diario. Tamaño estándar, liviano y resistente.</p>
                     <div class="precio">
                         <span class="precio-antes">$22.500</span>
                         <span class="precio-actual">$20.500</span>
@@ -63,10 +78,10 @@
                 <!-- Producto 2 -->
                 <div class="producto-card" onclick="window.location='producto.html?id=2'" style="cursor:pointer">
                     <div class="producto-imagen">
-                        <img src="/fotos/FotoImpAlpaca4.jpeg" alt="Mate Imperial Virola con Alpaca">
+                        <img src="fotos/FotoImpAlpaca4.jpeg" alt="Mate Imperial Virola con Alpaca">
                     </div>
                     <h3>Mate Imperial Virola con Alpaca</h3>
-                    <p class="descripcion">Exclusivo mate con virola Cincelada de alpaca de gran tamaño</p>
+                    <p class="descripcion">Exclusivo mate con virola cincelada de alpaca de gran tamaño. Acabado artesanal premium, ideal para regalo.</p>
                     <div class="precio">
                         <span class="precio-antes">$24.000</span>
                         <span class="precio-actual">$22.000</span>
@@ -79,10 +94,10 @@
                 <!-- Producto 3 -->
                 <div class="producto-card" onclick="window.location='producto.html?id=3'" style="cursor:pointer">
                     <div class="producto-imagen">
-                        <img src="/fotos/FotoCam2.jpeg" alt="Mate Camionero Algarrobo">
+                        <img src="fotos/FotoCam2.jpeg" alt="Mate Camionero Algarrobo">
                     </div>
                     <h3>Mate Camionero Algarrobo</h3>
-                    <p class="descripcion">Mate premium con acabado de Madera con Virola de Acero</p>
+                    <p class="descripcion">Mate premium con cuerpo de madera de algarrobo y virola de acero. Gran capacidad, perfecto para el camino.</p>
                     <div class="precio">
                         <span class="precio-antes">$17.000</span>
                         <span class="precio-actual">$16.000</span>
@@ -94,11 +109,11 @@
 
                 <!-- Producto 4 -->
                 <div class="producto-card" onclick="window.location='producto.html?id=4'" style="cursor:pointer">
-                    <div class="producto-imagen"> 
-                        <img src="/fotos/FotoImpCalabaza.jpeg" alt="Mate Camionero Calabaza">
+                    <div class="producto-imagen">
+                        <img src="fotos/FotoImpCalabaza.jpeg" alt="Mate Imperial Calabaza">
                     </div>
                     <h3>Mate Imperial Calabaza</h3>
-                    <p class="descripcion">Mate Imperial de calabaza, Virola Cincelada con alpaca</p>
+                    <p class="descripcion">Mate imperial de calabaza natural con virola cincelada de alpaca. Cada pieza es única por su forma artesanal.</p>
                     <div class="precio">
                         <span class="precio-antes">$29.000</span>
                         <span class="precio-actual">$26.500</span>
@@ -111,10 +126,10 @@
                 <!-- Producto 5 -->
                 <div class="producto-card" onclick="window.location='producto.html?id=5'" style="cursor:pointer">
                     <div class="producto-imagen">
-                        <img src="/fotos/FotoCamCalabaza.jpeg" alt="Foto Camionero Calabaza">
+                        <img src="fotos/FotoCamCalabaza.jpeg" alt="Mate Camionero Calabaza">
                     </div>
                     <h3>Mate Camionero Calabaza</h3>
-                    <p class="descripcion">Mate Camionero de Calabaza</p>
+                    <p class="descripcion">Mate camionero de calabaza natural, de gran capacidad. Resistente y con el sabor auténtico de la calabaza.</p>
                     <div class="precio">
                         <span class="precio-antes">$17.000</span>
                         <span class="precio-actual">$16.000</span>
@@ -127,10 +142,10 @@
                 <!-- Producto 6 -->
                 <div class="producto-card" onclick="window.location='producto.html?id=6'" style="cursor:pointer">
                     <div class="producto-imagen">
-                        <img src="/fotos/BombillaCincelada.jpeg" alt="Bombilla Acero Inoxidable">
+                        <img src="fotos/BombillaCincelada.jpeg" alt="Bombilla Cincelada Acero Inoxidable">
                     </div>
                     <h3>Bombilla Cincelada Acero Inoxidable</h3>
-                    <p class="descripcion">Bombilla Cincelada de acero inoxidable</p>
+                    <p class="descripcion">Bombilla cincelada de acero inoxidable 18/8. Filtro antitaponamiento, fácil limpieza y larga durabilidad.</p>
                     <div class="precio">
                         <span class="precio-antes">$11.000</span>
                         <span class="precio-actual">$10.000</span>
@@ -143,10 +158,10 @@
                 <!-- Producto 7 -->
                 <div class="producto-card" onclick="window.location='producto.html?id=7'" style="cursor:pointer">
                     <div class="producto-imagen">
-                        <img src="/fotos/BombillaLisa.jpeg" alt="Bombilla Acero Inoxidable">
+                        <img src="fotos/BombillaLisa.jpeg" alt="Bombilla Lisa Acero Inoxidable">
                     </div>
                     <h3>Bombilla Lisa Acero Inoxidable</h3>
-                    <p class="descripcion">Bombilla Lisa de acero inoxidable</p>
+                    <p class="descripcion">Bombilla lisa de acero inoxidable, diseño clásico y funcional. Compatible con todo tipo de mates.</p>
                     <div class="precio">
                         <span class="precio-antes">$9.000</span>
                         <span class="precio-actual">$8.500</span>
@@ -160,7 +175,7 @@
         </div>
     </section>
 
-    <!-- Características -->  
+    <!-- Características -->
     <section class="caracteristicas">
         <div class="container">
             <div class="caracteristicas-grid">
@@ -171,7 +186,7 @@
                 </div>
                 <div class="caracteristica">
                     <i class="fas fa-shipping-fast"></i>
-                    <h3>Envío Pais</h3>
+                    <h3>Envío País</h3>
                     <p>Envíos a toda Argentina</p>
                 </div>
                 <div class="caracteristica">
@@ -200,10 +215,12 @@
         <div class="container">
             <h2>Contacto</h2>
             <div class="contacto-content">
-                <form class="formulario" onsubmit="enviarFormulario(event)">
-                    <input type="text" placeholder="Tu Nombre" required>
-                    <input type="email" placeholder="Tu Email" required>
-                    <textarea placeholder="Tu Mensaje" rows="5" required></textarea>
+                <!-- ✅ FIX 4: Formulario integrado con Formspree -->
+                <!-- IMPORTANTE: Reemplazá YOUR_FORM_ID con tu ID de https://formspree.io -->
+                <form class="formulario" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="mostrarConfirmacion(event)">
+                    <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                    <input type="email" name="email" placeholder="Tu Email" required>
+                    <textarea name="mensaje" placeholder="Tu Mensaje" rows="5" required></textarea>
                     <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
                 </form>
                 <div class="contacto-info">
@@ -217,7 +234,7 @@
                     </div>
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <p>Parque Avellaneda, Ciudad Autonoma de Buenos Aires, Argentina</p>
+                        <p>Parque Avellaneda, Ciudad Autónoma de Buenos Aires, Argentina</p>
                     </div>
                 </div>
             </div>
@@ -230,8 +247,8 @@
             <p>&copy; 2026 Mates Juntos. Todos los derechos reservados.</p>
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/matesjuntos.ok/"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/5493544321486"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/matesjuntos.ok/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/5493544321486" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </footer>
